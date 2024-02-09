@@ -128,4 +128,4 @@ options.add_argument('--headless=new') # make browser run in background
 ```
 
 ## Running Sample
-![Running Sample](img/Sample.png)
+![Running Sample](img/Samples.png)

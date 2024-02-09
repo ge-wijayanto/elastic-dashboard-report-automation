@@ -126,3 +126,6 @@ options.add_argument('--ignore-certificate-errors')
 options.add_argument(r"user-data-dir=C:\Users\<Username>\AppData\Local\Google\Chrome\User Data") # Change <Username> accordingly
 options.add_argument('--headless=new') # make browser run in background
 ```
+
+## Running Sample
+![Running Sample](img/Sample.png)

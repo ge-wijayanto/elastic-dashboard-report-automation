@@ -60,7 +60,7 @@ def getScreenCapture():
         # time.sleep(20) #to ensure page is completely rendered
 
         # Perform Screenshot
-        screenshot_path = f"path/to/file/<filename>{i}.png" # Change Filename accordingly
+        screenshot_path = f"path/to/file/<filename>{i}.png" # Change File path and name accordingly
         driver.save_screenshot(screenshot_path)
 
         i += 1

@@ -11,7 +11,7 @@ import assetArray
 def getScreenCapture():
     i = 0
 
-    print(f'Starting Hourly Automation process... {Fore.RED}DO NOT CLOSE THIS WINDOW{Style.RESET_ALL}')
+    print(f'Starting Dashboard Report Automation process... {Fore.RED}DO NOT CLOSE THIS WINDOW{Style.RESET_ALL}')
     print(f'{Fore.CYAN}Initializing Session...{Style.RESET_ALL}')
     
     # Configuration for Firefox webdriver

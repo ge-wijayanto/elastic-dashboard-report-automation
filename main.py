@@ -3,6 +3,10 @@ import subprocess
 import time
 
 if __name__ == "__main__":
+    # Banner
+    subprocess.call("python banner.py")
+    time.sleep(1)
+    
     # Run Capturer Script
     subprocess.call("python Capturer.py", shell=True)
     time.sleep(3)

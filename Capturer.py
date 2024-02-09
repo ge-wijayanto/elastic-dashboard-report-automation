@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from colorama import Style, Fore, Back
 import time
 
 import assetArray
@@ -10,6 +11,9 @@ import assetArray
 def getScreenCapture():
     i = 0
 
+    print(f'Starting Hourly Automation process... {Fore.RED}DO NOT CLOSE THIS WINDOW{Style.RESET_ALL}')
+    print(f'{Fore.CYAN}Initializing Session...{Style.RESET_ALL}')
+    
     # Configuration for Firefox webdriver
     # Setting ignore certificate to bypass "Your connection is not private"
     options = webdriver.FirefoxOptions()
@@ -37,6 +41,8 @@ def getScreenCapture():
 
     # Core Capturer Loop
     for i in range(len(assetArray.target_link)):
+        print(f'Capturing {Fore.GREEN}{assetArray.caption[i]}{Style.RESET_ALL}...')
+        
         # Open a new tab and switch to it
         driver.execute_script("window.open('', '_blank');")
         driver.switch_to.window(driver.window_handles[1])
@@ -57,7 +63,7 @@ def getScreenCapture():
 
         driver.set_window_size(width, height)
 
-        # time.sleep(20) #to ensure page is completely rendered
+        # time.sleep(20) # to ensure page is completely rendered
 
         # Perform Screenshot
         screenshot_path = f"path/to/file/<filename>{i}.png" # Change File path and name accordingly

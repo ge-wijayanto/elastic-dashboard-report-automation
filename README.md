@@ -108,7 +108,21 @@ three_hours_before_local = current_datetime_local - datetime.timedelta(hours=3)
 7. Send.py - Change the designated WA recipient.
 ```py
 # Phone Number/Random WhatsApp Generated ID for target recipient
-# For Individual recipient, a phone number can be used for <target value>
-# For WA Group recipient, the random invitation ID (Found in group invitation links) can be used for <target value>
-recipient_number = "<target value>" # Change <target value> accordingly
+# For Individual recipient, a phone number can be used for <GroupID/PhoneNumber>
+# For WA Group recipient, the random invitation ID (Found in group invitation links) can be used for <GroupID/PhoneNumber>
+# Open WhatsApp Web
+driver.get('https://web.whatsapp.com/accept?code=<GroupID/PhoneNumber>') # Change <GroupID/PhoneNumber> accordingly
+```
+
+8. Send.py - Change the location of browser profiles.
+```py
+# Initialize the Chrome profile
+# profile = webdriver.FirefoxProfile(firefox_profile_path)
+options = webdriver.ChromeOptions()
+# options.profile = firefox_profile_path
+options.add_argument("--window-size=1920,1080")
+options.add_argument('--ignore-ssl-errors=yes')
+options.add_argument('--ignore-certificate-errors')
+options.add_argument(r"user-data-dir=C:\Users\<Username>\AppData\Local\Google\Chrome\User Data") # Change <Username> accordingly
+options.add_argument('--headless=new') # make browser run in background
 ```

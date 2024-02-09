@@ -33,3 +33,7 @@ caption = [
     # ...
     f"Report Title n\n{synonym.synonym_of_day}, {synonym.date} {synonym.synonym_of_month} {synonym.year} {synonym.old_local_clock}:00 - {synonym.current_local_clock}:00 WIB"
 ]
+
+dateandtime = [
+    f"{synonym.synonym_of_day}, {synonym.date} {synonym.synonym_of_month} {synonym.year} {synonym.old_local_clock}:00 - {synonym.current_local_clock}:00 WIB"
+]
